@@ -10,7 +10,7 @@ class PalindromeChecker
      * @param $input
      * @return bool
      */
-    public function check($input)
+    public function isPalindrome($input)
     {
         if (empty($input)){
             return false;

@@ -17,7 +17,7 @@ class PalindromeCheckerTest extends TestCase
      */
     public function it_returns_true_when_its_palindrome($input)
     {
-        $result = $this->checker->check($input);
+        $result = $this->checker->isPalindrome($input);
         $this->assertTrue($result);
     }
 
@@ -28,7 +28,7 @@ class PalindromeCheckerTest extends TestCase
      */
     public function it_returns_false_when_input_is_not_palindrome($input)
     {
-        $result = $this->checker->check($input);
+        $result = $this->checker->isPalindrome($input);
         $this->assertFalse($result);
     }
 
@@ -40,6 +40,7 @@ class PalindromeCheckerTest extends TestCase
     public function validPalindromes()
     {
         return [
+            ['a'],
             ['tot'],
             ['dood'],
             ['peeweep'],

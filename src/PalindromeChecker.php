@@ -16,15 +16,21 @@ class PalindromeChecker
             return false;
         }
 
-        $charArr = str_split(strtolower($input));
-        $charCount = count($charArr);
+        $charCount = strlen($input);
+        $input = strtolower($input);
+
+        if ($charCount === 1) {
+            return true;
+        }
 
         for($i=0; $i < ($charCount / 2); $i++) {
 
-            if ($charArr[$i] != $charArr[$charCount - $i - 1]) {
+            if ( substr($input, $i, 1) !=  substr($input, $charCount - $i - 1, 1)) {
+
                 return false;
             }
         }
+
         return true;
     }
 }

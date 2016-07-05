@@ -12,13 +12,12 @@ class PalindromeChecker
      */
     public function isPalindrome($input)
     {
+        $input = preg_replace('/[^a-zA-Z0-9]/', '', strtolower($input));
         if (empty($input)){
             return false;
         }
 
         $charCount = strlen($input);
-        $input = strtolower($input);
-
         if ($charCount === 1) {
             return true;
         }

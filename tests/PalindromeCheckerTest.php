@@ -44,7 +44,9 @@ class PalindromeCheckerTest extends TestCase
             ['tot'],
             ['dood'],
             ['peeweep'],
-            ['Civic']
+            ['Civic'],
+            ['lol!'],
+            [' lol !']
         ];
     }
 
